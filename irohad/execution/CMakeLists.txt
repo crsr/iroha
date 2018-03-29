@@ -26,6 +26,5 @@ target_link_libraries(command_execution
         ${Boost_LIBRARIES}
         logger
         common_execution
-        validator
         rxcpp
         )
