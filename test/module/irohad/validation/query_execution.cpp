@@ -795,6 +795,7 @@ TEST_F(GetAccountTransactionsTest, MyAccountValidCase) {
   auto cast_resp = boost::get<w<shared_model::interface::TransactionsResponse>>(
       response->get());
 
+  ASSERT_EQ(cast_resp->transactions().size(), N);
   for (const auto &tx : cast_resp->transactions()) {
     EXPECT_EQ(admin_id, tx->creatorAccountId());
   }
@@ -825,6 +826,7 @@ TEST_F(GetAccountTransactionsTest, AllAccountValidCase) {
   auto cast_resp = boost::get<w<shared_model::interface::TransactionsResponse>>(
       response->get());
 
+  ASSERT_EQ(cast_resp->transactions().size(), N);
   for (const auto &tx : cast_resp->transactions()) {
     EXPECT_EQ(account_id, tx->creatorAccountId());
   }
@@ -855,6 +857,7 @@ TEST_F(GetAccountTransactionsTest, DomainAccountValidCase) {
   auto cast_resp = boost::get<w<shared_model::interface::TransactionsResponse>>(
       response->get());
 
+  ASSERT_EQ(cast_resp->transactions().size(), N);
   for (const auto &tx : cast_resp->transactions()) {
     EXPECT_EQ(account_id, tx->creatorAccountId());
   }
@@ -889,6 +892,7 @@ TEST_F(GetAccountTransactionsTest, GrantAccountValidCase) {
   auto cast_resp = boost::get<w<shared_model::interface::TransactionsResponse>>(
       response->get());
 
+  ASSERT_EQ(cast_resp->transactions().size(), N);
   for (const auto &tx : cast_resp->transactions()) {
     EXPECT_EQ(account_id, tx->creatorAccountId());
   }
@@ -989,6 +993,7 @@ TEST_F(GetAccountAssetsTransactionsTest, MyAccountValidCase) {
   auto cast_resp = boost::get<w<shared_model::interface::TransactionsResponse>>(
       response->get());
 
+  ASSERT_EQ(cast_resp->transactions().size(), N);
   for (const auto &tx : cast_resp->transactions()) {
     EXPECT_EQ(admin_id, tx->creatorAccountId());
   }
@@ -1019,6 +1024,7 @@ TEST_F(GetAccountAssetsTransactionsTest, AllAccountValidCase) {
   auto cast_resp = boost::get<w<shared_model::interface::TransactionsResponse>>(
       response->get());
 
+  ASSERT_EQ(cast_resp->transactions().size(), N);
   for (const auto &tx : cast_resp->transactions()) {
     EXPECT_EQ(account_id, tx->creatorAccountId());
   }
@@ -1049,6 +1055,7 @@ TEST_F(GetAccountAssetsTransactionsTest, DomainAccountValidCase) {
   auto cast_resp = boost::get<w<shared_model::interface::TransactionsResponse>>(
       response->get());
 
+  ASSERT_EQ(cast_resp->transactions().size(), N);
   for (const auto &tx : cast_resp->transactions()) {
     EXPECT_EQ(account_id, tx->creatorAccountId());
   }
@@ -1083,6 +1090,7 @@ TEST_F(GetAccountAssetsTransactionsTest, GrantAccountValidCase) {
   auto cast_resp = boost::get<w<shared_model::interface::TransactionsResponse>>(
       response->get());
 
+  ASSERT_EQ(cast_resp->transactions().size(), N);
   for (const auto &tx : cast_resp->transactions()) {
     EXPECT_EQ(account_id, tx->creatorAccountId());
   }

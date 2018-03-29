@@ -17,20 +17,8 @@
 #ifndef IROHA_QUERY_EXECUTION_HPP
 #define IROHA_QUERY_EXECUTION_HPP
 
-#include "model/query.hpp"
-#include "model/query_response.hpp"
-
-#include "model/queries/get_account.hpp"
-#include "model/queries/get_account_assets.hpp"
-#include "model/queries/get_account_detail.hpp"
-#include "model/queries/get_asset_info.hpp"
-#include "model/queries/get_roles.hpp"
-#include "model/queries/get_signatories.hpp"
-#include "model/queries/get_transactions.hpp"
-
 #include "ametsuchi/block_query.hpp"
 #include "ametsuchi/wsv_query.hpp"
-
 #include "builders/protobuf/builder_templates/query_response_template.hpp"
 
 namespace shared_model {
